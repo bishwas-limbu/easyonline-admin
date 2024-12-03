@@ -13,7 +13,7 @@ const ListProduct = ({ token }) => {
   const getProductList = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:8000/api/v2/products/"
+          import.meta.env.VITE_BACKEND_URL + "products/"
       );
 
       console.log(response.data.data.productList);
