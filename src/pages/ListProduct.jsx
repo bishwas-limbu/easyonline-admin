@@ -44,7 +44,7 @@ const ListProduct = ({ token }) => {
     try {
       console.log("delete Product : ", id);
       const response = await axios.delete(
-       `http://3.141.211.239:9000/api/v2/products/del/${id}`,
+       `http://3.136.201.176:9000/api/v2/products/del/${id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
