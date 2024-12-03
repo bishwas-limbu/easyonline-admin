@@ -39,7 +39,7 @@ const Add = ({ token, setToken }) => {
       formData.append("image", image);
 
       const response = await axios.post(
-          import.meta.env.VITE_BACKEND_URL + "products/create",
+          "http://3.136.201.176:9000/api/v2/products/create",
         formData,
         {
           headers: { Authorization: `Bearer ${token}` },

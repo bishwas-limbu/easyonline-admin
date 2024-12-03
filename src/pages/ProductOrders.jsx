@@ -17,9 +17,9 @@ const ProductOrders = ({ token }) => {
       if (!token) {
         return null;
       }
-      console.log(import.meta.env.VITE_BACKEND_URL + "orders/list");
+      //"http://3.136.201.176:9000/api/v2/orders/list");
       const response = await axios.get(
-        import.meta.env.VITE_BACKEND_URL + "orders/list",
+        "http://3.136.201.176:9000/api/v2/orders/list",
         {
           headers: { Authorization: `Bearer ${token}` },
         }
