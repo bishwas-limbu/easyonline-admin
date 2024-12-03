@@ -17,7 +17,7 @@ const Login = ({isAdmin,setIsAdmin,setToken,token}) => {
         e.preventDefault();
        // console.log(email,password)
      //  console.log(backendUrl);
-       const response = await axios.post('http://localhost:8000/api/v2'+'/users/login/admin',{email,password});
+       const response = await axios.post(import.meta.env.VITE_BACKEND_URL +'/users/login/admin',{email,password});
        console.log(response.data);
        if(response.data.status){
         const jwtToken = response.data.data ;
