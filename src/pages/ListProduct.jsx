@@ -44,7 +44,7 @@ const ListProduct = ({ token }) => {
     try {
       console.log("delete Product : ", id);
       const response = await axios.delete(
-        `http://localhost:8000/api/v2/products/del/${id}`,
+        import.meta.env.VITE_BACKEND_URL +`products/del/${id}`,
         {
           headers: { Authorization: `Bearer ${token}` },
         }
