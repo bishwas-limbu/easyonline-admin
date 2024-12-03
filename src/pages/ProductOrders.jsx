@@ -19,7 +19,7 @@ const ProductOrders = ({ token }) => {
       }
       //"http://3.136.201.176:9000/api/v2/orders/list");
       const response = await axios.get(
-        "http://3.136.201.176:9000/api/v2/orders/list",
+        "http://3.141.211.239:9000/api/v2/orders/list",
         {
           headers: { Authorization: `Bearer ${token}` },
         }

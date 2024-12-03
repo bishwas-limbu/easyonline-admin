@@ -17,9 +17,9 @@ const Login = ({isAdmin,setIsAdmin,setToken,token}) => {
         e.preventDefault();
        // console.log(email,password)
      //  console.log(backendUrl);
-       const response = await axios.post('http://3.136.201.176:9000/api/v2/users/login/admin',{email,password});
+       const response = await axios.post('http://3.141.211.239:9000/api/v2/users/login/admin',{email,password});
        console.log(response.data);
-       if(response.data.status){
+       if(response.data.status === true){
         const jwtToken = response.data.data ;
       // navigate('/');
         try {
