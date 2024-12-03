@@ -6,13 +6,17 @@ services:
       build:
         context:  .
         dockerfile: Dockerfile
-      
+
       expose:
         - 5174
       ports:
-        - "5174:80"
+        - "5174:5174"
       environment:
         - CHOKIDAR_USEPOLLING=true
-      
-      volumes:
-        - .:/app  
+
+      networks:
+        - my-bridge  # Use a user-defined bridge network
+
+networks:
+  my-bridge:
+    driver: bridge
